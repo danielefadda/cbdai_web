@@ -1,0 +1,117 @@
+extends includes/layout
+include includes/mixin
+
+block content
+    .container.mt-5
+      //- breadcrumbs
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='#') Home
+          li.breadcrumb-item
+            a(href='#') Shop
+          li.breadcrumb-item.active(aria-current='page') Gravda sagittis felism
+    
+    .container.single-product-content
+      .row.large-gutters
+        .col-lg-6
+          .single-product-images.popup-gallery
+            img(src='assets/images/products/1.jpg', alt='Product Image', width='800', height='893')
+            ul.product-images-gallery
+              li
+                img(src='assets/images/products/20.jpg', alt='Product image', width='800', height='893')
+              li
+                img(src='assets/images/products/2.jpg', alt='Product image', width='800', height='893')
+              li
+                img(src='assets/images/products/4.jpg', alt='Product image', width='800', height='893')
+              li
+                img(src='assets/images/products/21.jpg', alt='Product image', width='800', height='893')
+            .clearfix
+        .col-lg-6
+          .single-product-content.mt-lg-0
+            h1.entry-title.product-title Gravda sagittis felism
+            .single-product-price $9.85
+            .single-product-rating
+              span.rating.mr-2
+                span.fas.fa-star
+                span.fas.fa-star
+                span.fas.fa-star
+                span.fas.fa-star-half-alt
+                span.far.fa-star
+              a.rating-count(href='#') (2 customer review)
+            .single-product-description
+              p I love things that age well - things that dont date, that stand the test of time and that become living examples of the absolute best. You have a more interesting life if you wear impressive clothes.
+              p I think there is something about luxury - it's not something people need, but it's what they want. 
+            .add-to-cart-warp
+              .quantity.d-flex
+                input.form-control.qty.total-quantity(type='number', step='1', min='1', name='quantity', value='1', title='Qty', size='2')
+              a.btn.btn-dark.btn-add-cart.rounded-1(href='#') Add To Cart 
+              .clearfix
+            ul.single-product-meta
+              li
+                span SKU: 
+                  span 007
+              li
+                span Category: 
+                  span Clothes
+              li
+                span Tags: 
+                  span Top, Dress
+      // Tabs
+      hr.mt-5.mb-6
+      .row
+        .col-md-3.mb-4.mb-md-0
+          #v-pills-tab.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+            a#description-tab.nav-link.active(data-toggle='pill', href='#description', role='tab', aria-controls='description', aria-selected='true') Description
+            a#additional-information-tab.nav-link(data-toggle='pill', href='#additional-information', role='tab', aria-controls='additional-information', aria-selected='false')  Additional Information
+            a#reviews-tab.nav-link(data-toggle='pill', href='#reviews', role='tab', aria-controls='reviews', aria-selected='false')  Reviews
+        .col-md-9
+          #v-pills-tabContent.tab-content
+            #description.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='description-tab')
+              p I don't really know how to do casual clothes. I try as much as possible to give you a great basic product and what comes out, I feel, is really amazing. I don't care about money. I really don't care. I just want to do what I do. Fashion fades, only style remains the same.
+              p I think in the darkest moments, we need a break. I don't like trends. They tend to make everybody look the same. My job is to bring out in people what they wouldn't dare do themselves. The important thing is to take your time and not get stressed.
+            #additional-information.tab-pane.fade(role='tabpanel', aria-labelledby='additional-information-tab')
+              table.table.table-striped
+                tbody
+                  tr
+                    th(scope='row') Color
+                    td Red, Blue, Yellow, Orange
+                  tr
+                    th(scope='row') Sizes
+                    td Size 4, Size 6, Size 8, Size 10, size 12, Size 14, Size 16
+                  tr
+                    th(scope='row') Fabric type
+                    td Silk, Crêpe 
+
+            #reviews.tab-pane.fade(role='tabpanel', aria-labelledby='reviews-tab')
+              //- Comments Area
+              include includes/comments-area
+      //  Related Items
+      hr.mt-5.mb-5
+      .mb-3
+        h4.mb-4 Related Items
+        +shop(
+            false,
+            '',
+            'col-md-6 col-lg-3',
+            {
+            image:'assets/images/products/1.jpg',
+            title:'Quisque dignissim', 
+            price:'69.00',
+            },
+            {
+            image:'assets/images/products/2.jpg',
+            title:'Quisque dignissim', 
+            price:'69.00',
+            },
+            {
+            image:'assets/images/products/3.jpg',
+            title:'Quisque dignissim', 
+            price:'69.00',
+            },
+            {
+            image:'assets/images/products/4.jpg',
+            title:'Quisque dignissim', 
+            price:'69.00',
+            }
+        )

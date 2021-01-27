@@ -1,0 +1,12 @@
+.btn-default.rounded-0 {
+    color: $soft-creame;
+    background-color: $soft-blue;
+    border-color: $soft-blue;
+
+    &:hover {
+        color: #fff;
+        background-color: $soft-orange;
+        border-color: $soft-orange;
+    }
+    
+}

@@ -1,0 +1,18 @@
+.member-content {
+    .member-text {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .member-name {
+            margin-bottom: 15px;
+        }
+        .member-tag {
+            color: $gray-600;
+            margin-bottom: 18px;
+        }
+        .member-links {
+            color: $dark-blue;
+        }
+    }
+}

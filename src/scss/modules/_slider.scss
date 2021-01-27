@@ -1,0 +1,80 @@
+/* Arrows */
+
+.flickity-prev-next-button {
+  width: 65px;
+  height: 56px;
+  border-radius: 0;
+  background: $accent-background-color;
+
+  .flickity-button-icon {
+    width: 28%;
+  }
+
+  &.previous {
+    .flickity-button-icon {
+      left: 37%;
+    }
+  }
+
+  &.next {
+    .flickity-button-icon {
+      left: 35%;
+    }
+  }
+}
+
+.flickity-page-dots {
+  bottom: -45px;
+  .dot {
+    width: 15px;
+    height: 5px;
+    border-radius: 0;
+    background: $dark-blue;
+  }
+}
+
+.light-slider-nav {
+  .slick-prev,
+  .slick-next {
+    background: transparent !important;
+    box-shadow: none;
+
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+}
+// Workflow Carousel
+.workflow-carousel {
+  .workflow-carousel-item {
+    @include media-breakpoint-up(lg) {
+      width: 500px;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+    margin-right: 60px;
+    .carousel-item-img {
+      position: relative;
+      .counter {
+        @include font-size(47px);
+        line-height: 1;
+        color: $cream;
+        font-weight: $headings-font-weight;
+        position: absolute;
+        left: 23px;
+        bottom: 18px;
+      }
+    }
+    .carousel-item-title {
+      margin-top: 25px;
+      color: $dark-blue;
+    }
+  }
+  .flickity-page-dots {
+    @include media-breakpoint-down(lg) {
+      bottom: -25px;
+    }
+  }
+}

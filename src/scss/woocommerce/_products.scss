@@ -1,0 +1,159 @@
+/**
+ * Products
+ */
+ul.products {
+  margin: 0;
+  padding: 0;
+
+  li.product {
+    list-style: none;
+    margin-bottom: $spacer * 1.5;
+
+    &:hover .product-img-wrapper .btn-add-to-cart {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    .product-img-wrapper {
+      position: relative;
+      overflow: hidden;
+	img {
+		
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+      .btn-add-to-cart {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateY(105%);
+        -moz-transform: translateY(105%);
+        transform: translateY(105%);
+        -webkit-transition: -webkit-transform 0.1s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.1s ease-out, color 0.1s ease-out;
+        transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.1s ease-out, color 0.1s ease-out;
+      }
+    }
+
+    .product-content-wrapper {
+      background: $white;
+      padding: 25px 20px 15px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      .woocommerce-loop-product__title {
+		margin-bottom: $spacer / 2;
+		color: $body-color;
+        @include font-size($font-size-base);
+
+        &:before {
+          content: none;
+        }
+      }
+
+      .price {
+        font-family: $headings-font-family;
+		font-weight: $headings-font-weight;
+        display: block;
+        color: $gray-500;
+      }
+    }
+
+    .woocommerce-loop-product__link {
+      display: block;
+    }
+
+    .star-rating {
+	  margin-bottom: 0.8rem;
+	  color: $body-color;
+    }
+
+    .woocommerce-placeholder {
+      border: 1px solid #f2f2f2;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateY(105%);
+      -ms-transform: translateY(105%);
+      transform: translateY(105%);
+      -webkit-transition: -webkit-transform 0.1s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.1s ease-out, color 0.1s ease-out;
+      -webkit-transition: background-color 0.1s ease-out, color 0.1s ease-out,
+        -webkit-transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: background-color 0.1s ease-out, color 0.1s ease-out,
+        -webkit-transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.1s ease-out, color 0.1s ease-out;
+      transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.1s ease-out, color 0.1s ease-out,
+        -webkit-transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	  color: $white;
+	  border-radius: 0;
+	  
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+    }
+
+    .added_to_cart {
+      color: $white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transition: -webkit-transform 0.15s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.15s ease-out, color 0.15s ease-out;
+      -webkit-transition: background-color 0.15s ease-out, color 0.15s ease-out,
+        -webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: background-color 0.15s ease-out, color 0.15s ease-out,
+        -webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.15s ease-out, color 0.15s ease-out;
+      transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.15s ease-out, color 0.15s ease-out,
+		-webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		
+		border-radius: 0;
+	  
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+    }
+
+    &:hover {
+      .product-img-wrapper .button {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      .product-img-wrapper .added_to_cart {
+        -webkit-transform: translateY(-61px);
+        -ms-transform: translateY(-61px);
+        transform: translateY(-61px);
+      }
+    }
+  }
+}

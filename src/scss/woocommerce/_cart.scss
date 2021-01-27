@@ -1,0 +1,207 @@
+/**
+ * Cart
+ */
+
+.woocommerce-cart-form {
+  img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+  }
+
+  dl.variation {
+    margin-top: 0;
+
+    p,
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .product-remove {
+    text-align: center;
+  }
+
+  .quantity {
+    input {
+      width: 5rem;
+      padding-right: $spacer / 1.5;
+      padding-left: $spacer / 1.5;
+    }
+  }
+
+  .cart td.actions {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .coupon {
+      .input-text {
+        width: 200px !important;
+        float: left;
+        margin-right: 0.25rem;
+        border-top-left-radius: 5rem;
+        border-bottom-left-radius: 5rem;
+        margin-right: 0;
+      }
+      .button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
+
+.cart_totals {
+  > h2 {
+    color: $gray-500;
+  }
+  th,
+  td {
+    vertical-align: top;
+  }
+
+  th {
+    padding-right: 1rem;
+  }
+
+  .woocommerce-shipping-destination {
+    margin-bottom: 0;
+  }
+  .wc-proceed-to-checkout {
+    margin-top: 40px;
+  }
+}
+
+.cart-collaterals {
+  margin-top: $spacer * 3;
+  .cart_totals.calculated_shipping {
+    background-color: $accent-background-color;
+    padding: $spacer * 3 $spacer * 2.5 $spacer * 4;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: -webkit-linear-gradient(transparent 0, transparent 0),
+        -webkit-linear-gradient(135deg, $accent-background-color 33.33%, transparent
+              33.33%),
+        -webkit-linear-gradient(45deg, $accent-background-color 33.33%, transparent
+              33.33%);
+      top: -16px;
+      left: 0;
+      width: 100%;
+      height: 16px;
+      background-size: 0 100%, 16px 16px, 16px 16px;
+    }
+
+    h2 {
+      margin-bottom: $spacer * 2;
+    }
+
+    .wc-proceed-to-checkout {
+      .checkout-button {
+        background-color: $component-active-color;
+        border-color: $component-active-color;
+        color: $component-active-bg;
+        &:hover {
+          background-color: darken($component-active-color, 5%);
+          border-color: darken($component-active-color, 5%);
+        }
+      }
+    }
+  }
+}
+
+// Header cart
+
+.navbar-nav {
+  .nav-item-cart {
+    > a {
+      position: relative;
+      i {
+        margin-right: 10px;
+        color: $gray-900;
+      }
+    }
+    .site-header-cart {
+      min-width: 320px;
+      padding: $dropdown-item-padding-y * 2 0;
+      .widget_shopping_cart_content {
+        .product_list_widget {
+          padding: 0;
+          margin: 0;
+          li {
+            padding: $spacer $dropdown-item-padding-x;
+            list-style: none;
+            position: relative;
+
+            &:not(:first-child) {
+              border-top: solid 1px #f2f2f2;
+            }
+
+            @include clearfix;
+
+            img {
+              width: 60px;
+              float: right;
+              margin-left: $spacer;
+            }
+
+            a,
+            .quantity {
+              display: block;
+              margin-left: 32px;
+            }
+            .quantity {
+              @include font-size($font-size-xs);
+            }
+
+            a.remove {
+              position: absolute;
+              top: $spacer * 1.45;
+              margin: 0;
+            }
+          }
+
+          &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: $accent-background-color;
+          }
+          &::-webkit-scrollbar {
+            width: 8px;
+            background-color: $accent-background-color;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $gray-500;
+            border: 2px solid $gray-500;
+          }
+        }
+      }
+      p {
+        padding-right: $dropdown-item-padding-x;
+        padding-left: $dropdown-item-padding-x;
+      }
+      .woocommerce-mini-cart__total {
+        border-top: solid 1px #f2f2f2;
+        padding-top: $spacer;
+      }
+      .woocommerce-mini-cart__buttons {
+        a {
+          display: block;
+          &:first-child {
+            margin-bottom: $spacer * 0.6;
+            background-color: darken($light, 2%);
+            color: $body-color;
+
+            &:hover {
+              background-color: darken($light, 5%);
+            }
+          }
+        }
+      }
+      .woocommerce-mini-cart__empty-message {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

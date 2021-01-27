@@ -1,0 +1,250 @@
+/**
+ * Widgets
+ */
+.widget.woocommerce {
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.widget .product_list_widget,
+.site-footer .widget .product_list_widget {
+  margin-bottom: 1.5rem;
+
+  a {
+    display: block;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  li {
+    margin-bottom: $spacer * 2.5;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    a.remove {
+      float: left;
+      margin-top: 7px;
+      line-height: 20px;
+      color: #fff;
+      margin-right: 0.5rem;
+    }
+
+    .product-title {
+      font-weight: $headings-font-weight;
+      font-family: $headings-font-family;
+    }
+
+    .woocommerce-Price-amount {
+      @include font-size($font-size-sm);
+    }
+
+    .star-rating {
+      @include font-size($font-size-xs);
+      margin: $spacer * 0.5 0;
+    }
+  }
+
+  img {
+    margin-bottom: $spacer;
+  }
+}
+
+.widget_shopping_cart {
+  .buttons {
+    a {
+      display: inline-block;
+      margin: 0 0.5rem 0 0;
+    }
+  }
+}
+
+.widget_layered_nav {
+  .chosen {
+    &:before {
+      content: "×";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border-radius: 100%;
+      border: 1px solid black;
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.widget_price_filter {
+  .price_slider {
+    margin-bottom: 1rem;
+  }
+
+  .price_slider_amount {
+    text-align: right;
+    line-height: 2.4;
+    @include font-size($font-size-sm);
+
+    .button {
+      float: left;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  .ui-slider {
+    position: relative;
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1em;
+    height: 1em;
+    background-color: $gray-500;
+    border-radius: 1em;
+    cursor: ew-resize;
+    outline: none;
+    top: -0.3em;
+    margin-left: -0.5em;
+  }
+
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    @include font-size($font-size-sm);
+    display: block;
+    border: 0;
+    border-radius: 1em;
+    background-color: $accent-btn-bg-color;
+  }
+
+  .price_slider_wrapper .ui-widget-content {
+    border-radius: 1em;
+    background-color: #777;
+    border: 0;
+  }
+
+  .ui-slider-horizontal {
+    height: 0.5em;
+  }
+
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+
+  .ui-slider-horizontal .ui-slider-range-min {
+    left: -1px;
+  }
+
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: -1px;
+  }
+}
+
+.widget_rating_filter {
+  li {
+    text-align: right;
+
+    .star-rating {
+      float: left;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+// Serach
+
+.woocommerce-product-search {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+
+  .search-field {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+
+    background: $white;
+    border-color: $white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    &:focus {
+      outline-color: $white;
+    }
+  }
+
+  button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-left: -1px;
+    width: 50.44px;
+    background: $white;
+    border-color: $white;
+    position: relative;
+    font-size: 0px;
+    visibility: hidden;
+
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f002";
+      visibility: visible;
+      width: 50.44px;
+      padding: 14.5px 15px 14px 0;
+      margin-left: -4px;
+      color: $body-color;
+      background: $white;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      @include font-size($font-size-base);
+    }
+  }
+}
+
+.widget_product_categories {
+  .product-categories {
+    li {
+      .count {
+        text-align: right;
+		float: right;
+		background: $white;
+		@include font-size(14px);
+		border-radius: 50px;
+		margin: 0.5rem 0;
+		padding: 1px 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/**
+* Tables
+*/
+.woocommerce,
+.woocommerce-page {
+  table.shop_table {
+    thead,
+    &:not(.order_details) tfoot {
+      td,
+      th {
+        border: none;
+      }
+    }
+
+    thead,
+    tfoot {
+      td,
+      th {
+        background-color: $accent-background-color;
+      }
+    }
+
+    td,
+    th {
+      word-break: normal;
+      padding: 1.25rem;
+      vertical-align: middle;
+    }
+
+    &:not(.order_details) tbody tr:nth-of-type(even) {
+      background-color: $accent-background-color;
+    }
+  }
+  .variations {
+    td {
+      border-top: none;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

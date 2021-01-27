@@ -1,0 +1,16 @@
+.page-main-title {
+    padding: $spacer * 6 0 $spacer * 6.25;
+    background-color: $soft-creame;
+    @include media-breakpoint-down(sm) { 
+        padding: $spacer * 2.5 0;
+    }
+    .entry-title {
+        margin-bottom: 15px;
+        color: $soft-orange;
+    }
+
+    p {
+        margin: 0;
+        @include font-size($lead-font-size);
+    }
+}

@@ -1,0 +1,387 @@
+// Content variables
+$content_width: 770px;
+$content_max-width: 770px;
+$content_mobile-width: 90%;
+
+$content__width: 770px;
+$content__width--wide: 1200px;
+$content__padding: 20px;
+$content__width--less-padding: $content__width - ($content__padding * 2);
+$content__width--wide--less-padding: $content__width--wide - ($content__padding * 2);
+$content__media-query: $content__width - 1;
+$content__media-query--wide: $content__width--wide - 1;
+$content__align--leftright-margin: $content__width / 2 - $content__padding;
+$content__align--mobile-media-query--min: 499px;
+$content__align--mobile-media-query--max: $content__align--mobile-media-query--min - 1;
+$content__align--width: 300px;
+$content__spacer: 30px;
+$content__spacer--mobile: 20px;
+$block__quote--border-width: 4px;
+$block__quote--cite-font: "";
+
+// Websites languages direction
+
+$language-direction: ltr; // set value 'rtl' for right to left languages
+$language-opposite-direction: rtl; // set value 'ltr' for right to left languages
+$language-start-direction: left; // set value 'right' for right to left languages
+$language-end-direction: right; // set value 'left' for right to left languages
+$language-transform-direction: 1; // set value '-1' for right to left languages
+
+//project color
+$soft-creame: #f4e9da;
+$sun-shade: #fbbe4b;
+$soft-orange: #ed5c4d;
+$soft-blue: #273253;
+$sky-blue: #57b5ed;
+$black: #000000;
+$border-color:#EDEDED;
+$border-black-color:#EDEDED;
+
+// Color system
+$gray-600: #adadad;
+$gray-500: #b5c4c7;
+$gray-900: #232126;
+$gray-700:#707070;
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$dark: #111;
+$blue: #341fff;
+$light-blue: #1da1f2;
+$dark-blue: #0000FF;
+$primary: #0000FF;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+
+$orange: #d66300;
+$moss: #e7ede3;
+$cream: #fff0e0;
+$tan: #efe4de;
+
+$colors: ();
+$colors: map-merge((
+    "blue": $blue,
+    "light-blue": $light-blue,
+    "dark-blue": $dark-blue,
+    "orange": $orange,
+    "moss": $moss,
+    "cream": $cream,
+    "tan": $tan,
+    "soft-creame": $soft-creame,
+    "soft-blue": $soft-blue,
+    "sun-shade": $sun-shade,
+    "black": $black,
+    "sky-blue": $sky-blue,
+    "soft-orange": $soft-orange,
+    "border-color": $border-color,
+    "border-black-color": $border-black-color,
+    "white": $white
+    ),
+    
+  $colors);
+
+  //Theme Colors
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "blue": $blue,
+  "light-blue": $light-blue,
+  "dark-blue": $dark-blue,
+  "orange": $orange,
+  "moss": $moss,
+  "cream": $cream,
+  "tan": $tan,
+  "soft-creame": $soft-creame,
+  "soft-blue": $soft-blue,
+  "sun-shade": $sun-shade,
+  "black": $black,
+  "sky-blue": $sky-blue,
+  "soft-orange": $soft-orange,
+  "border-color": $border-color,
+  "border-black-color": $border-black-color,
+  "white": $white
+);
+
+$light: $white;
+$accent-background-color: $cream;
+$accent-background-color: $white;
+
+$accent-btn-bg-color: $dark-blue;
+$accent-btn-text-color: $white;
+
+@import "node_modules/bootstrap/scss/functions";
+
+// Set
+// The
+// Customize
+// Options
+
+$enable-responsive-font-sizes: true;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (0: 0,
+  1: ($spacer * 0.25,
+  ),
+  //4px
+  2: ($spacer * 0.5,
+  ),
+  //8px
+  3: ($spacer * 1,
+  ),
+  //16px
+  4: ($spacer * 1.5,
+  ),
+  //24px
+  5: ($spacer * 3,
+  ),
+  //48px
+  6: ($spacer * 4,
+  ),
+  //64px
+  7: ($spacer * 5,
+  ),
+  //80px
+  8: ($spacer * 6.25,
+  ),
+  //100px
+  9: ($spacer * 7.5,
+  ),
+  //120px
+  10: ($spacer * 9.375,
+  ) //150px,
+);
+// This
+// stylelint
+// Body
+
+$body-bg: #fff;
+
+// Settings
+
+// Links
+
+$link-color: $black;
+$link-hover-color: $soft-orange;
+
+$link-decoration: none;
+
+// Paragraphs
+//
+// Style
+// Grid containers
+
+$small-screen: 540px;
+$medium-screen: 720px;
+$large-screen: 960px;
+$extra-large-screen: 1320px;
+
+$container-max-widths: (sm: $small-screen,
+  md: $medium-screen,
+  lg: $large-screen,
+  xl: $extra-large-screen,
+);
+
+// adapting
+// Grid
+//
+// Define
+// Grid
+//
+// Set
+// Components
+
+$line-height-lg: 2;
+$line-height-sm: 1.7;
+
+$border-radius: 0.15rem;
+$border-color: #000000;
+$border-color-blog:$soft-creame;
+
+
+$component-active-color: $blue;
+$component-active-bg: $cream;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace;
+$font-family-base: "Poppins",
+sans-serif;
+
+// stylelint-enable value-keyword-case
+$font-size-base: 1rem;
+
+$font-size-sm: $font-size-base * 0.9;
+
+$font-size-xs: $font-size-base * 0.7;
+
+$font-size-md: $font-size-base * 1.1;
+$font-size-huge: $font-size-base * 1.5;
+
+$font-weight-base: 400;
+$line-height-base: 1.8;
+
+$lead-font-weight: 400;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$headings-margin-bottom: 0;
+$headings-font-family: "Poppins",
+sans-serif;
+$headings-font-weight: 600;
+$headings-line-height: 1.4;
+$headings-color: null;
+
+$hr-border-color: $border-color;
+
+$list-inline-padding: $spacer * 1.25;
+
+//g
+
+// Assumes
+// Tables
+//
+// Customizes
+// Buttons
+//
+// Shared
+// Buttons + Forms
+$input-btn-padding-y: 0.813rem;
+$input-btn-padding-x: 1.5rem;
+$input-btn-font-size: $font-size-sm;
+$btn-border-radius: 0.125rem;
+$btn-font-weight: $headings-font-weight;
+
+
+// Forms
+
+$input-bg: Transparent;
+$input-border-color: #707070;
+$input-focus-border-color: $black;
+
+// Extra
+// In
+
+// Used
+// For
+// Form
+// stylelint
+// Z
+// Warning
+// of
+// Navs
+// Navbar
+$navbar-padding-y: 0;
+
+// Compute
+// Dropdowns
+$dropdown-font-size: 14;
+$dropdown-border-color: lighter($border-color, 3%);
+$dropdown-link-hover-bg: #f4e9da73;
+$dropdown-link-active-bg: #f4e9da73;
+$dropdown-link-hover-color: $soft-orange;
+
+$nav-pills-link-active-color: $soft-orange;
+
+// Pagination
+
+$pagination-padding-x: 0.93rem;
+
+$pagination-bg: $white;
+$pagination-border-color: $border-color;
+
+$pagination-hover-bg: $dark;
+$pagination-hover-border-color: $border-color;
+$pagination-hover-color: $white;
+
+$pagination-active-color: $white;
+$pagination-active-bg: $dark;
+$pagination-active-border-color: $pagination-active-bg;
+
+// Jumbotron
+// Cards
+// Tooltips
+// Form
+// Popovers
+// Toasts
+// Badges
+// Use
+// customizing
+// Modals
+// Padding
+// Keep
+// Alerts
+// Define
+// Progress
+// List
+// Image
+// Figures
+// Breadcrumbs
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+
+$breadcrumb-bg: $white;
+$breadcrumb-divider-color: $gray-500;
+$breadcrumb-active-color: $gray-500;
+$breadcrumb-divider: quote(">");
+
+// Carousel
+// Define
+// Spinners
+// Close
+// Code
+// Utilities
+//Printing
+
+$caret-width: 0.21em;
+
+@import "node_modules/bootstrap/scss/variables";
+
+// @import "wp/variables-site/variables-site";
+// @import "wp/mixins/mixins-master";

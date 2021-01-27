@@ -1,0 +1,73 @@
+// Text colors
+@each $color,
+$value in $colors {
+    .has-#{$color}-color {
+        color: #{$value};
+    }
+}
+
+// Background colors
+@each $color,
+$value in $colors {
+    .has-#{$color}-background-color {
+        background-color: #{$value};
+    }
+}
+
+.popup-gallery img {
+    cursor: zoom-in;
+}
+
+.hover-opacity-effect {
+    img {
+        transition: opacity .6s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    padding-#{$language-start-direction}: 0;
+    .list-inline-item {
+        &:not(:last-child) {
+            margin: 0;
+            margin-#{$language-end-direction}: $list-inline-padding;
+        }
+    }
+}
+.breadcrumb-item+.breadcrumb-item {
+    padding: 0;
+    padding-#{$language-start-direction}: $spacer / 2;
+    &:before {
+        padding: 0;
+        padding-#{$language-end-direction}: $spacer / 2;
+    }
+}
+.pagination li:not(:last-child) {
+    margin-right: 0;
+    margin-left: 0;
+    margin-#{$language-end-direction}: 0.8333333333rem;
+}
+// lozad fade
+.lozad-fade {
+    animation-name: lozad-fade;
+    animation-duration: 2s;
+}
+
+@keyframes lozad-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.clear {
+    
+	@include clearfix();
+}

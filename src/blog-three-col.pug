@@ -1,0 +1,120 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  +pagetitle({title:'Blog Three Col', description:'Duis auctor eros ac urna dictum, eget rhoncus ex fringilla. Vestibulum in ex massa. Sed accumsan tortor libero. Phasellus gravida nibh vel odio semper vitae.'})
+  .container.mt-8.mb-7
+    +blog(
+      '',
+      'col-md-6 col-lg-4',
+      isReadMore=false,
+      {
+      image:'assets/images/blog/1.jpg',
+      title:'Seven Explanation On Why Finance Is Important', 
+      category:'Photography',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/2.jpg',
+      title:'Most Effective Ways To Overcome Finances Problem',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/3.jpg',
+      title:'Never Underestimate The Influence Of Startup',
+      category:'Photography',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/4.jpg',
+      title:'Five Reliable Sources To Learn About Startup', 
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/5.jpg',
+      title:'5 Benefits Of Startup That May Change Your Perspective', 
+      category:'Photography',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/6.jpg',
+      title:'The Reason Why Everyone Love Startup Company',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/7.jpg',
+      title:'The Story Of New Startup Has Just Gone Viral',
+      category:'Photography',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/8.jpg',
+      title:'Most Effective Ways To Overcome Finances Problem',
+      category:'Photography',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/9.jpg',
+      title:'Never Underestimate The Influence Of Startup',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/10.jpg',
+      title:'Five Reliable Sources To Learn About Startup',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/11.jpg',
+      title:'5 Benefits Of Startup That May Change Your Perspective',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      },
+      {
+      image:'assets/images/blog/12.jpg',
+      title:'The Reason Why Everyone Love Startup Company',
+      category:'Humour',
+      date:'March 22, 2020',
+      content:''
+      }
+
+    )
+    .text-center.align-items-center
+      a.btn.btn-default.rounded-0(href='blog-three-col.html') Load More
+
+    // Subscription  
+    .container
+      .row.align-items-center.gx-lg-7.mb-lg-9.mt-lg-9.mt-7.mb-7
+        .col-lg-6
+          .px-3
+            h2.mb-3 Subscribe and keep up with the latest from Moiz
+            p.pr-7 Maecenas ultricies, ligula id condimentum efficitur, orci diam tincidunt nisi, et mollis nisl dui ut risus. Nam neque magna, rutrum id sapien elementum, ornare pretium arcu. Suspendisse lacinia pharetra lobortis. Donec vitae eros ut velit lacinia aliquam sodales hendrerit.
+            p.pr-7 Phasellus ut urna eget justo consectetur at ante. Etiam ipsum neque, feugiat ut gravida non, imperdiet nec mi. Quisque vitae urna ut mauris laoreet ullamcorper quis sit amet tellus
+        .col-lg-6
+          .border-drop-left.border-color-soft-creame
+            .has-soft-creame-background-color.py-5.px-4.py-lg-7.px-lg-6
+              form(action='#')
+                .mb-4
+                  input#fname.form-control(type='text' name='fname' value='First Name')
+                .mb-4
+                  input#lname.form-control(type='text' name='lname' value='Last Name')
+                .mb-4
+                  p Your email will be safely stored in our database. We respect your privacy. Signing up is quick and easy and you can unsubscribe instantly at any time by clicking the link in the footer of our  emails.
+                .mb-4  
+                  a.btn.btn-default.rounded-0.btn-block(href='#') Subscribe

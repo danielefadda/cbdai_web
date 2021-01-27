@@ -1,0 +1,63 @@
+extends includes/layout
+include includes/mixin
+
+block content
+    //- Page title
+    +pagetitle({title:'Shop', description:'I love things that age well - things that dont date, that stand the test of time and that become living examples of the absolute best. You have a more interesting life if you wear impressive clothes. Awkwardness gives me great comfort.'})
+    .container
+        .row
+            .col-lg-9.order-lg-2.mb-7
+                +shop(
+                    true,
+                    '',
+                    'col-md-4 col-lg-4',
+                    {
+                    image:'assets/images/products/1.jpg',
+                    title:'Edam fashion triangles', 
+                    price:'85.00',
+                    },
+                    {
+                    image:'assets/images/products/2.jpg',
+                    title:'Cred migas portland', 
+                    price:'53.00',
+                    },
+                    {
+                    image:'assets/images/products/3.jpg',
+                    title:'Unicorn truffaut vinyl', 
+                    price:'78.00',
+                    },
+                    {
+                    image:'assets/images/products/4.jpg',
+                    title:'Mumblecore meditation', 
+                    price:'64.00',
+                    },
+                    {
+                    image:'assets/images/products/5.jpg',
+                    title:'Pour-over keytar', 
+                    price:'58.00',
+                    },
+                    {
+                    image:'assets/images/products/6.jpg',
+                    title:'Meggings roof party', 
+                    price:'68.00',
+                    },
+                    {
+                    image:'assets/images/products/7.jpg',
+                    title:'Jean shorts swag', 
+                    price:'75.00',
+                    },
+                    {
+                    image:'assets/images/products/8.jpg',
+                    title:'Mumblecore meditation', 
+                    price:'82.00',
+                    },
+                    {
+                    image:'assets/images/products/9.jpg',
+                    title:'Blue bottle venmo', 
+                    price:'99.00',
+                    }
+                )
+                +pagination
+            .col-lg-3.order-lg-1.mb-7
+                //- Sidebar
+                include includes/sidebar-shop

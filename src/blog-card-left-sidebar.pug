@@ -1,0 +1,72 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  +pagetitle({title:'Blog Left Sidebar', description:'Duis auctor eros ac urna dictum, eget rhoncus ex fringilla. Vestibulum in ex massa. Sed accumsan tortor libero. Phasellus gravida nibh vel odio semper vitae.'})
+  .container.mt-8
+    .row.large-gutters
+
+      .col-lg-8.order-lg-2.mb-7
+        +blog(
+          'card-post-style',
+          'col-md-12 col-lg-12',
+          true,
+          {
+          image:'assets/images/blog/8.jpg',
+          title:'Seven Explanation On Why Finance Is Important',  
+          category:'Photography',
+          author:'Amjad Ali',
+          date:'March 22, 2020',
+          commentCount:'2',
+          isEdit:true,
+          content:'Praesent blandit nibh ac justo auctor pretium. Maecenas mauris metus, vulputate ac volutpat sit amet, facilisis quis odio. Nam ut commodo neque. Cras pellentesque nisi, id laoreet nibh. Aliquam in ante elit.'
+          },
+          {
+          image:'assets/images/blog/1.jpg',
+          title:'Most Effective Ways To Overcome Finances Problem',
+          category:'Humour',
+          author:'Amjad Ali',
+          date:'March 22, 2020',
+          commentCount:'2',
+          isEdit:true,
+          content:'Praesent blandit nibh ac justo auctor pretium. Maecenas mauris metus, vulputate ac volutpat sit amet, facilisis quis odio. Nam ut commodo neque. Cras pellentesque nisi, id laoreet nibh. Aliquam in ante elit.'
+          },
+          {
+          image:'assets/images/blog/3.jpg',
+          title:'Suspendisse viverra massa eget nibh ultricies mollis',
+          category:'Photography',
+          author:'Amjad Ali',
+          date:'March 22, 2020',
+          commentCount:'2',
+          isEdit:true,
+          content:'Praesent blandit nibh ac justo auctor pretium. Maecenas mauris metus, vulputate ac volutpat sit amet, facilisis quis odio. Nam ut commodo neque. Cras pellentesque nisi, id laoreet nibh. Aliquam in ante elit.'
+          }
+        )
+        .text-center.align-items-center
+          a.btn.btn-default.rounded-0(href='blog-three-col.html') Load More
+      .col-lg-4.order-lg-1
+        //- Sidebar
+        include includes/sidebar
+
+  // form subscription  
+  .container
+    .row.align-items-center.gx-lg-7.mb-lg-9.mt-lg-9.mt-7.mb-7
+      .col-lg-6
+        .px-3
+          h2.mb-lg-3 Subscribe and keep up with the latest from Moiz
+          p.pr-lg-7 Maecenas ultricies, ligula id condimentum efficitur, orci diam tincidunt nisi, et mollis nisl dui ut risus. Nam neque magna, rutrum id sapien elementum, ornare pretium arcu. Suspendisse lacinia pharetra lobortis. Donec vitae eros ut velit lacinia aliquam sodales hendrerit.
+          p.pr-lg-7 Phasellus ut urna eget justo consectetur at ante. Etiam ipsum neque, feugiat ut gravida non, imperdiet nec mi. Quisque vitae urna ut mauris laoreet ullamcorper quis sit amet tellus
+
+      .col-lg-6
+        .border-drop-left.border-color-soft-creame
+          .has-soft-creame-background-color.py-5.px-4.py-lg-7.px-lg-6
+            form(action='#')
+              .mb-4
+                input#fname.form-control(type='text' name='fname' value='First Name')
+              .mb-4
+                input#lname.form-control(type='text' name='lname' value='Last Name')
+              .mb-4
+                p Your email will be safely stored in our database. We respect your privacy. Signing up is quick and easy and you can unsubscribe instantly at any time by clicking the link in the footer of our  emails.
+              .mb-4  
+                a.btn.btn-default.rounded-0.btn-block(href='#') Subscribe

@@ -1,0 +1,26 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  article.entry
+    .entry-content
+      //- Page title
+      // Hero
+      .home-hero.pt-5.pt-lg-8.pb-lg-7.text-center
+        .container
+          .row
+            .col-lg-6.offset-lg-3
+              h1.title-404 404
+              h2.h1.has-soft-orange-color  Page Not Found
+              .mt-lg-3.mt-4  
+                p We’re sorry, the page you have looked for does not exist in our database! Maybe go to our home page or try to use a search?
+              .mt-lg-5.px-lg-3.mt-4.px-3  
+                form
+                  .form-group.row
+                    .col-lg-10.col-md-10
+                      input.form-control(type='text' placeholder='Search..' name='search')
+                    .col-lg-2.col-md-2
+                      a.btn.btn-default.rounded-0.px-5(href='#') 
+                        i.fa.fa-search
+              .mt-lg-5.mb-lg-6.mt-4.mb-6  
+                a.btn.btn-default.rounded-0(href='index.html') Go Back To Home Page

@@ -1,0 +1,89 @@
+.wc-block-grid {
+  .wc-block-grid__products {
+    .wc-block-grid__product {
+      text-align: left;
+      .wc-block-grid__product-image {
+        margin-bottom: 0;
+        img {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+      }
+      .wc-block-grid__product-title {
+        color: $body-color;
+        @include font-size($font-size-base);
+        margin-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: $spacer / 2;
+        padding-right: 15px;
+        padding-left: 15px;
+        background: $white;
+      }
+      .wc-block-grid__product-price.price {
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        @include font-size($font-size-base);
+        color: $gray-500;
+        background: $white;
+        padding-bottom: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .wc-block-grid__product-rating {
+        display: none;
+      }
+
+      .wp-block-button {
+        .add_to_cart_button {
+          margin: auto;
+          position: absolute;
+          top: calc(50% - 40px);
+          left: 50%;
+          right: 0;
+          transform: translate(-50%, -50%);
+        
+          opacity: 0;
+          transition: 0.3s;
+        }
+        .added_to_cart  {
+            margin: auto;
+            position: absolute;
+            top: calc(50% + 10px);
+            left: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+      }
+      &:hover {
+        .wp-block-button .add_to_cart_button {
+            opacity: 1;
+        }
+      }
+
+      .wc-block-grid__product-onsale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        background: $component-active-color;
+        color: #fff;
+        display: inline-block;
+        font-family: $headings-font-family;
+        @include font-size($font-size-xs);
+        font-weight: $headings-font-weight;
+        line-height: 1;
+        padding: $spacer * 0.8 $spacer * 0.6 $spacer * 0.6;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+        z-index: 1;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

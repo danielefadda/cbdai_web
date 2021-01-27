@@ -1,0 +1,33 @@
+.portfolio {
+    article {
+        margin-bottom: $spacer * 4;
+        @include media-breakpoint-up(md) { margin-bottom: $spacer * 6; }
+        .entry-media {
+            margin-bottom: $spacer * 1;
+        }
+
+        .entry-content-wrapper {
+            .entry-header {
+
+                .entry-meta-top,
+                .entry-meta-top a {
+                    @include font-size($h5-font-size);
+                    font-weight: $headings-font-weight;
+                    color: $soft-orange;
+                    margin-top: 35px;
+                }
+
+                .entry-title {
+                    @include font-size($h3-font-size);
+                    color: $soft-blue;
+                    margin-top: -10px;
+                }
+
+                .entry-content {
+                    @include font-size($h3-font-size);
+                    color: $soft-blue;
+                }
+            }
+        }
+    }
+}

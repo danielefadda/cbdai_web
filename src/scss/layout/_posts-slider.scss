@@ -1,0 +1,108 @@
+// Blog slider
+.blog-slider.blog-post.manndi-slider-one {
+    article {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        border: 0;
+
+        .entry-media {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .entry-content-wrapper {
+            position: absolute;
+            bottom: 0;
+            #{$language-start-direction}: 0;
+            max-width: 600px;
+            background-color: $accent-background-color;
+            padding: $spacer * 2;
+
+            @include media-breakpoint-down(md) {
+                max-width: 500px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: $spacer * 1.4 $spacer * 1;
+                position: relative;
+                max-width: 100%;
+            }
+
+            .entry-title {
+                @include media-breakpoint-down(md) {
+                    margin-top: $spacer * 0.5;
+                    margin-bottom: $spacer * 0.2;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    @include font-size($h5-font-size);
+                }
+            }
+
+            .entry-content {
+                padding: 0;
+
+                p {
+                    padding: 0;
+                }
+
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            .entry-read-more {
+                display: inline-block;
+                margin-top: $spacer;
+                @include media-breakpoint-down(md) { 
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        .flickity-prev-next-button {
+            top: initial;
+            bottom: 30px;
+            transform: translate(0, 0);
+        }
+
+        .flickity-prev-next-button.next {
+            #{$language-start-direction}: initial;
+            #{$language-end-direction}: 30px;
+        }
+
+        .flickity-prev-next-button.previous {
+            #{$language-start-direction}: initial;
+            #{$language-end-direction}: 110px;
+        }
+
+
+    }
+
+    @include media-breakpoint-down(md) {
+
+        .flickity-prev-next-button.previous,
+        .flickity-prev-next-button.next {
+            top: 10px;
+            transform: translate(0, 0);
+        }
+
+        .flickity-prev-next-button.next {
+            left: initial;
+            right: 10px;
+        }
+
+        .flickity-prev-next-button.previous {
+            left: initial;
+            right: 87px;
+        }
+
+    }
+
+}

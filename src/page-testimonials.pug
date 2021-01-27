@@ -1,0 +1,85 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  article.entry
+    .entry-content
+      //- Page title
+      // Hero
+      .home-hero.pt-5.pb-5.pt-lg-8.pb-lg-8
+        .container
+          .row
+            .col-lg-5
+              .pr-lg-1
+                .has-soft-orange-color
+                  h2.mb-2.mb-lg-2 Testimonials
+                p.pr-lg-3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+      // brands 
+      .half-percent-bg-cream  
+        .container
+          .row.gx-0.align-items-stretch
+            .col-lg-6.testimonial-1-bg-img.py-10.order-lg-1
+            .col-lg-6.has-white-background-color.border.border-lg-right-0.border-md-top-0.border-soft-creame
+              .py-5.py-lg-10.px-lg-6
+                .px-4
+                  i.has-soft-blue-color.display-2.fas.fa-quote-left
+                  p.lead.pt-2.mt-4.mb-4 Adipisci qui natus expedita aut eum aut. Et ut repellendus ea quis autem reprehenderit volu ptatem. Amet totam dolor is voluptates a tenetur sit. Qui asperiores excepturi perspiciatis totam rerum volup tatem et neque pariatur. Fugiat qui illum sequi ea qui. Iure eos fugit.
+                  cite.has-soft-orange-color.pt-2.h5.font-normal Michael D. Wilson - CEO of New City
+
+
+
+      .mt-lg-7.mt-5
+        .container
+          .row.align-items-stretch.gx-0
+            .col-lg-6.testimonial-2-bg-img.py-10
+            .col-lg-6.border.border-lg-left-0.border-md-top-0.border-soft-creame.order-lg-1
+              .py-5.py-lg-10.px-lg-6.px-4
+                i.has-soft-blue-color.display-2.fas.fa-quote-left
+                p.lead.pt-2.mt-4.mb-4 Adipisci qui natus expedita aut eum aut. Et ut repellendus ea quis autem reprehenderit volu ptatem. Amet totam dolor is voluptates a tenetur sit. Qui asperiores excepturi perspiciatis totam rerum volup tatem et neque pariatur. Fugiat qui illum sequi ea qui. Iure eos fugit.
+                cite.has-soft-orange-color.pt-2.h5.font-normal Michael D. Wilson - CEO of New City
+
+
+      .mt-lg-7.mt-5
+        .container
+          .row.align-items-strecth.gx-0
+            .col-lg-6.testimonial-3-bg-img.py-10.order-lg-1
+            .col-lg-6.border.border-lg-right-0.border-md-top-0.border-soft-creame
+              .py-5.py-lg-10.px-lg-6.px-4
+                i.has-soft-blue-color.display-2.fas.fa-quote-left
+                p.lead.pt-2.mt-4.mb-4 Adipisci qui natus expedita aut eum aut. Et ut repellendus ea quis autem reprehenderit volu ptatem. Amet totam dolor is voluptates a tenetur sit. Qui asperiores excepturi perspiciatis totam rerum volup tatem et neque pariatur. Fugiat qui illum sequi ea qui. Iure eos fugit.
+                cite.has-soft-orange-color.pt-2.h5.font-normal Michael D. Wilson - CEO of New City
+
+
+      .mt-lg-7.mt-5
+        .container
+          .row.align-items-stretch.gx-0
+            .col-lg-6.testimonial-4-bg-img.py-10
+            .col-lg-6.border.border-lg-left-0.border-md-top-0.border-soft-creame.order-1
+              .py-5.py-lg-10.px-lg-6.px-4
+                i.has-soft-blue-color.display-2.fas.fa-quote-left
+                p.lead.pt-2.mt-4.mb-4 Adipisci qui natus expedita aut eum aut. Et ut repellendus ea quis autem reprehenderit volu ptatem. Amet totam dolor is voluptates a tenetur sit. Qui asperiores excepturi perspiciatis totam rerum volup tatem et neque pariatur. Fugiat qui illum sequi ea qui. Iure eos fugit.
+                cite.has-soft-orange-color.pt-2.h5.font-normal Michael D. Wilson - CEO of New City
+
+
+      // form subscription  
+      .container
+        .row.align-items-center.gx-lg-7.mb-lg-9.mt-lg-9.mt-7.mb-7
+          .col-lg-6
+            .px-3
+              h2.mb-lg-3 Subscribe and keep up with the latest from Moiz
+              p.pr-lg-7 Maecenas ultricies, ligula id condimentum efficitur, orci diam tincidunt nisi, et mollis nisl dui ut risus. Nam neque magna, rutrum id sapien elementum, ornare pretium arcu. Suspendisse lacinia pharetra lobortis. Donec vitae eros ut velit lacinia aliquam sodales hendrerit.
+              p.pr-lg-7 Phasellus ut urna eget justo consectetur at ante. Etiam ipsum neque, feugiat ut gravida non, imperdiet nec mi. Quisque vitae urna ut mauris laoreet ullamcorper quis sit amet tellus
+
+          .col-lg-6.mt-4
+            .border-drop-left.border-color-soft-creame
+              .has-soft-creame-background-color.py-5.px-4.py-lg-7.px-lg-6
+                form(action='#')
+                  .mb-lg-4.mb-4
+                    input#fname.form-control(type='text' name='fname' value='First Name')
+                  .mb-lg-4.mb-4
+                    input#lname.form-control(type='text' name='lname' value='Last Name')
+                  .mb-lg-4.mb-4
+                    p Your email will be safely stored in our database. We respect your privacy. Signing up is quick and easy and you can unsubscribe instantly at any time by clicking the link in the footer of our  emails.
+                  .mb-lg-4  
+                    a.btn.btn-default.rounded-0.btn-block(href='#') Subscribe
