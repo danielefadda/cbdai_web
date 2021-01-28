@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Business Modeling for Big Data', description:' '})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Business Modeling for Big Data:
+        br
+        | il modo di fare business, ma più in generale il modo di creare valore per le imprese, i territori e la società in generale, richiede modelli di business che in molti casi sono diversi rispetto al passato ed in forte discontinuità con le attuali best practice.

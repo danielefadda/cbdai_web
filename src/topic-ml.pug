@@ -1,0 +1,17 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Machine learning', description:' '})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Machine learning:
+        br
+        | Apprendimento con supervisione su sequenze (segnali, stringhe, time-series), alberi e grafi; algoritmi di apprendimento automatico efficienti e scalabili; machine learning distribuito e decentralizzato; design di modelli e algoritmi di machine learning (deep learning, reti neurali, modelli probabilistici, reservoir computing, approcci kernel-based, ecc.); automatic machine learning - algoritmi per l’ottimizzazione di iperparametri e per il meta-learning; explainable AI & machine learning (tecniche che consentano di estrarre informazioni facilmente interpretabili e fruibili a fini decisionali e per la valutazione di trattamenti e politiche); approcci ibridi di AI; applicazioni di intelligenza artificiale in vari ambiti, quali IoT, robotica, software engineering, veicoli a guida autonoma, veicoli connessi, 5G, medicina, sport, energia, bioinformatica, natural language processing, network management e scienze della vita.
+

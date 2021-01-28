@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Scienza delle reti', description:' '})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Scienza delle reti:
+        br
+        | modellazione, analisi, caratterizzazione tramite BigData analytics, complex systems analysis e tecnologie di AI di strutture a rete (sia statiche che dinamiche), con applicazioni allo studio di sistemi sociali complessi in diversi ambiti (ad esempio, mobilità, smart cities, finanziario ed economico, social media, medico, industriale).

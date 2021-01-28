@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Analytics 4.0', description:'Big Data analytics nel settore industriale'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Big Data analytics nel settore industriale:
+        br
+        | Applicazioni finalizzate a sostenere obiettivi dell’agenda di Industria 4.0, tra cui disegno sperimentale, rilevazione e classificazione dei guasti, manutenzione predittiva, ottimizzazione multi-obiettivo, predizione della domanda e dell’offerta, opinion mining, supporto a sistemi produttivi nell’ambito dell’economia circolare, conciliazione dei requisiti di affidabilità e sicurezza della pratica industriale con l’integrazione di componenti, integrazione orizzontale e verticale nei processi di produzione, metodi di verifica e valutazione per l’affidabilità di sistemi con componenti basati su apprendimento automatico.

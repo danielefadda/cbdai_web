@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Data Farmacy', description:'Data science per la progettazione/caratterizzazione di nuovi materiali o farmaci'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Data science per la progettazione/caratterizzazione di nuovi materiali o farmaci:
+        br
+        | Integrazione di grandi quantità di dati da fonti eterogenee (sensori, apparati sperimentali) con simulazioni “da principi primi” per la modellazione su scala nanoscopica delle proprietà di nuovi materiali con specifiche proprietà fisico-chimiche eventualmente controllabili tramite stimolo esterno.

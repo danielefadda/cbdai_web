@@ -1,51 +1,49 @@
-
-
 // Border drop
 .border-drop-right {
-  @include media-breakpoint-up(lg){
-  padding-right: 20px;
-  position: relative;
-
-  img {
+  @include media-breakpoint-up(lg) {
+    padding-right: 20px;
     position: relative;
-    z-index: 1;
-  }
 
-  &::after {
-    content: "";
-    border: solid 1px $soft-blue;
-    width: calc(100% - 20px);
-    height: 100%;
-    position: absolute;
-    display: block;
-    right: 0;
-    bottom: -20px;
-    z-index: 0;
-  }
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      border: solid 1px $soft-blue;
+      width: calc(100% - 20px);
+      height: 100%;
+      position: absolute;
+      display: block;
+      right: 0;
+      bottom: -20px;
+      z-index: 0;
+    }
   }
 }
 
 .border-drop-left {
   @include media-breakpoint-up(lg) {
-  padding-left: 20px;
-  position: relative;
-
-  > * {
+    padding-left: 20px;
     position: relative;
-    z-index: 1;
-  }
 
-  &::after {
-    content: "";
-    border: solid 1px $soft-blue;
-    width: calc(100% - 20px);
-    height: 100%;
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: -20px;
-    z-index: 0;
-  }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      border: solid 1px $soft-blue;
+      width: calc(100% - 20px);
+      height: 100%;
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -20px;
+      z-index: 0;
+    }
 
   }
 
@@ -75,6 +73,7 @@
     bottom: -20px;
     z-index: 0;
   }
+
   &.border-color-black::after {
     border: solid 1px $black;
   }
@@ -90,14 +89,13 @@
 // Backgrounds
 
 .home-hero {
-  background-color: $soft-creame;
-  ;
+  background-color: $soft-creame;;
   background-size: cover;
 
 }
 
 .home-hero-img {
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/home_bckg.jpg");
   background-size: cover;
   background-position: center center;
   min-height: 50vh;
@@ -121,14 +119,16 @@
 //back gorund color plans
 .twenty-percent-bg-cream {
   background-color: transparent;
-  @include media-breakpoint-up(lg){
-  background: linear-gradient(180deg, $soft-creame 17%, $white 17%);
+  @include media-breakpoint-up(lg) {
+    background: linear-gradient(180deg, $soft-creame 17%, $white 17%);
   }
 }
+
 .half-percent-bg-cream {
   background-color: transparent;
   background: linear-gradient(180deg, $soft-creame 50%, $white 50%);
 }
+
 .quater-percent-bg-cream {
   background: linear-gradient(180deg, $soft-creame 75%, $white 75%);
   background-color: transparent;
@@ -146,13 +146,13 @@
 }
 
 .home-hero-img {
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/home_bckg.jpg");
   background-size: cover;
   background-position: center center;
-  min-height: 40vh;
+  min-height: 20vh;
 
   @include media-breakpoint-up(lg) {
-    min-height: 80vh;
+    min-height: 50vh;
   }
 }
 
@@ -162,16 +162,19 @@
   background-size: cover;
   background-position: center center;
 }
+
 .testimonial-2-bg-img {
   background-image: url("../images/26.jpg");
   background-size: cover;
   background-position: center center;
 }
+
 .testimonial-3-bg-img {
   background-image: url("../images/27.jpg");
   background-size: cover;
   background-position: center center;
 }
+
 .testimonial-4-bg-img {
   background-image: url("../images/28.jpg");
   background-size: cover;
@@ -184,11 +187,13 @@
   background-size: cover;
   background-position: center center;
 }
+
 .services-2-bg-img {
   background-image: url("../images/30.jpg");
   background-size: cover;
   background-position: center center;
 }
+
 .services-3-bg-img {
   background-image: url("../images/31.jpg");
   background-size: cover;
@@ -240,6 +245,7 @@
     min-height: 80vh;
   }
 }
+
 .slider-four-img {
   background-image: url("../images/blog/4.jpg");
   background-size: cover;
@@ -253,11 +259,11 @@
 
 //page 404 title
 .title-404 {
-  @include media-breakpoint-up(lg){
-  color: #000000;
-  font-size: 280px;
-  font-weight: 600;
-  line-height: 310px;
+  @include media-breakpoint-up(lg) {
+    color: #000000;
+    font-size: 280px;
+    font-weight: 600;
+    line-height: 310px;
   }
   color: #000000;
   font-size: 175px;
@@ -267,8 +273,18 @@
 
 }
 
-//leading paragraph 
-.paragraph{
+//leading paragraph
+.paragraph {
   font-size: 20px;
   line-height: 32px;
+}
+
+
+//home-cover
+.home-cover-text-box {
+  background-color: rgba(256, 256, 256, 0.6);
+}
+
+.min-vh-40{
+  min-height:25vh !important
 }

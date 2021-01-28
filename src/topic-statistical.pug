@@ -1,0 +1,18 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Statistical Learning', description:' '})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Statistical Learning:
+        br
+        | Modelli e algoritmi per l’analisi, la previsione e la modellazione di dati con struttura complessa. Multivariate statistical modelling; causality e inferenza causale; causal machine learning; model e variable selection in ambiti high-dimensional; interpretability, fairness e transparency. Problemi e paradossi legati ai Big Data. Generalizability e reproducibility.
+
+

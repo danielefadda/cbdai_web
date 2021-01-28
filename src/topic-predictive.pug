@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Predictive e Prescriptive Analytic', description:' '})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Predictive e Prescriptive Analytics:
+        br
+        | metodi data-driven per il supporto alle decisioni in campo aziendale, organizzativo, sociale, sanitario, medico, sportivo; modelli e algoritmi data-driven per la diagnosi, cura e il supporto alla prescrizione (previsione di eventi, medicina personalizzata, valutazione della normalità), metodi ibridi basati sulla combinazione di approcci model based e data driven, modelli spiegabili per la diagnosi e la prescrizione personalizzata.

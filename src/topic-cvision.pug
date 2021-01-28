@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Computer vision', description:'Computer vision and pattern recognition'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Computer vision and pattern recognition:
+        br
+        | Analisi automatica di flussi video; localizzazione, tracking, e riconoscimento di oggetti in immagini e video; riconoscimento di eventi in video; tecniche di deep learning per applicazioni di visione artificiale (deep convolutional neural networks, generative adversarial networks, ecc.).

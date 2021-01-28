@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'High-performance platforms', description:'High-performance, scalable and real-time Big Data processing platforms'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong High-performance, scalable and real-time Big Data processing platforms:
+        br
+        | Architetture efficienti, flessibili e adattive per stream computing e real-time analytics su flussi di dati, incluso sistemi di storage e middleware scalabili, meccanismi a livello di sistema operativo e kernel per la realizzazione di elaborazioni che rispettano vincoli temporali; ottimizzazione del data flow “end-to-end”, dall’architettura dei dispositivi embedded che generano dati e/o interagiscono con gli utenti finali, delle piattaforme per l’elaborazione efficiente e/o predicibile di analitiche su Big Data, anche tramite l’utilizzo di infrastrutture di cloud computing e meccanismi adattivi per scalabilità/elasticità, nonché architetture di rete idonee a trasferimenti di ingenti quantità di dati con prescrizioni di banda e latenza; tecnologie di data management e metodi di analisi statistica altamente scalabili.

@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Algorithmic techniques', description:'Algorithmic techniques and methodologies for analysis, storage, mining, security and retrieval of Big Data'})
+  .container
+    .row.large-gutters
+      .col-lg-3.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Algorithmic techniques and methodologies for analysis, storage, mining, security and retrieval of Big Data:
+        br
+        | Big data modeling; algoritmi efficienti per big data analytics; data compression, indexing and search; topic-based annotation of big data, real-time filtering, web and text search/mining, sentiment analysis e opinion mining, natural language processing; complex/social network analysis; pattern discovery in graphs; predictive analytic; metodi per la data security e la protezione della privacy degli individui.

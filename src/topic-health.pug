@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Salute', description:'Data science in medicina, salute pubblica e nelle scienze della vita'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Data science in medicina, salute pubblica e nelle scienze della vita:
+        br
+        | Inferenza causale, previsione e valutazione dell'incertezza per stimare gli effetti delle esposizioni ambientali e per valutare l'impatto di politiche ambientali e sanitarie attuali o ipotetiche; analisi di fonti eterogenee di dati di grandi dimensioni (genetici, genomici, epigenomici, proteomici e microbiomici) per la medicina personalizzata, la network medicine e le scienze della vita (incluse ecologia e scienze agrarie); procedure per il trattamento, la quantificazione e la caratterizzazione dell'incertezza applicabili a strutture di dati complesse; tecniche algoritmiche, bioinformatiche, di Machine learning/AI e di network analytics per l'analisi, la modellazione, il confronto, e la ricerca di pattern in dati genomici, trascrittomici, e proteomici, rappresentati come stringhe, alberi, grafi o reti complesse, anche osservate ripetutamente nel tempo; analisi funzionale e predizione di proprietà dinamiche di pathway identificati da dati omici, analisi di dati clinici e di alberi filogenetici per lo studio dell'evoluzione dei tumori, identificazione di biomarcatori e terapie ottimali per stratificazione di pazienti e diagnosi precoce di malattie, anche in riferimento alla diagnosi precoce della malattia di Alzheimer e delle malattie neurodegenerative in genere.

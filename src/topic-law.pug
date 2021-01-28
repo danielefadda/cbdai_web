@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Privacy ed etica', description:'Aspetti giuridici ed etici della big data analytics e dell’Intelligenza Artificiale'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Aspetti giuridici ed etici della big data analytics e dell’Intelligenza Artificiale:
+        br
+        | Personal knowledge services basati su Big Data analytics e social mining, riflessione critica sul nesso tra diritti umani, privacy, etica e data science; sistemi per garantire trasparenza e accountability; riflessione critica sui rapporti tra big data, AI e concorrenza, tutela dei soggetti deboli o vulnerabili (es. consumatore, anziani, minori); algorithm regulation (protocolli giuridici ed etici su base transnazionale per guidare l'azione umana nella progettazione e nella revisione di algoritmi); protezione delle persone nel trattamento dei dati (data protection) e protezione dei dati medesimi (tutela dei dati anche non personali); gestione della proprietà intellettuale sia nella prospettiva tecnica che nella prospettiva del rapporto tra etica e diritto nelle forme tradizionali e nuove (es. trade secrets); metodi per rendere le fonti amministrative gestionali adeguatamente riusabili; applicazione delle teorie semantiche, abitualmente utilizzate ex-post in fase di integrazione delle fonti, in modalità ex-ante, al fine di generare, fin dalla scrittura dei testi delle leggi, dei repository riusabili statisticamente.

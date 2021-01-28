@@ -1,0 +1,16 @@
+extends includes/layout
+include includes/mixin
+
+block content
+  //- Page title
+  .mb-lg-9.mb-md-7.mb-5
+    +pagetitle({title:'Data Visualization', description:'Data Visualization, Data Journalism e Story telling'})
+  .container
+    .row.large-gutters
+      .col-lg-4.mb-7
+        //- Elements nav
+        include includes/topic-nav
+      .col-lg-6.mb-7
+        strong Data Visualization, Data Journalism e Story telling:
+        br
+        | Tecniche per la visualizzazione efficiente di grandi quantità di dati, anche multi-dimensionali, per abilitare l'esplorazione e la ricerca di pattern e favorire l'interpretabilità di modelli complessi; sviluppo di metodi di rappresentazione di dati complessi (e. g. grafi, iper-superfici) in ambienti virtuali; creazione di strumenti di analisi di Big Data in AR/VR; realizzazione di applicazioni AR/VR per iniziative di disseminazione e sensibilizzazione; strumenti a supporto della creazione e composizione di storie dai dati per prodotti giornalistici e di divulgazione scientifica.
