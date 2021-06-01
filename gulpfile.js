@@ -15,20 +15,20 @@ var pugSRC = './src/*.pug';
 
 // Styles.
 var styleSRC = './src/scss/style.scss';
-var styleDestination = './_demo/assets/css';
+var styleDestination = './docs/assets/css';
 var cssFiles = './**/*.css';
 var scssDistFolder = './_dist/' + slug + '/scss/';
 
 // Bootstrap.
 var bootstrapStyles = './src/scss/bootstrap.scss';
-var gutenbergStylesDestination = './_demo/assets/css/';
+var gutenbergStylesDestination = './docs/assets/css/';
 
 // CSS Vendor related.
 var cssVendorSRC = [
 	'node_modules/magnific-popup/dist/magnific-popup.css',
 	'node_modules/flickity/dist/flickity.min.css'
 ];
-var cssVendorDestination = './_demo/assets/css/'; // Path to place the compiled JS vendors file.
+var cssVendorDestination = './docs/assets/css/'; // Path to place the compiled JS vendors file.
 var cssVendorFile = 'vendors'; // Compiled JS vendors file name.
 
 // JS Vendor related.
@@ -42,44 +42,44 @@ var jsVendorSRC = [
 	'node_modules/aos/dist/aos.js',
 	'node_modules/lozad/dist/lozad.min.js'
 ];
-var jsVendorDestination = './_demo/assets/js/'; // Path to place the compiled JS vendors file.
+var jsVendorDestination = './docs/assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile = 'vendors'; // Compiled JS vendors file name.
 
 // JS Custom related.
 var jsCustomSRC = './src/js/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination = './_demo/assets/js/'; // Path to place the compiled JS custom scripts file.
+var jsCustomDestination = './docs/assets/js/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile = 'global'; // Compiled JS custom file name.
 
 // PHP related.
 var PHPSRC = [
 	'./src/php/**.php'
 ];
-var PHPDestination = './_demo/assets/php/'; // Path to place the compiled JS vendors file.
+var PHPDestination = './docs/assets/php/'; // Path to place the compiled JS vendors file.
 
 // Images related.
 var imagesSRC = './src/images/**/*.{png,jpg,gif,svg,ico}'; // Source folder of images which should be optimized.
-var imagesDestination = './_demo/assets/images/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
+var imagesDestination = './docs/assets/images/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // BrowserSync.
 var styleWatchFiles = ['./src/scss/**/*.scss'];
 var jsWatchFiles = ['./src/js/**/*.js'];
-var projectPHPWatchFiles = ['./**/*.php', '!_dist', '!_dist/**', '!_dist/**/*.php', '!_demo', '!_demo/**', '!_demo/**/*.php'];
+var projectPHPWatchFiles = ['./**/*.php', '!_dist', '!_dist/**', '!_dist/**/*.php', '!docs', '!docs/**', '!docs/**/*.php'];
 var pugWatchFiles = ['./src/*.pug', './src/**/*.pug'];
-var htmlWatchFiles = ['./_demo/*.html'];
+var htmlWatchFiles = ['./docs/*.html'];
 var imagesWatchFiles = imagesSRC;
 
 // Build.
-var distBuildFiles = ['./_demo/**/*'];
+var distBuildFiles = ['./docs/**/*'];
 var distDestination = './_dist/';
 var distCleanFiles = ['./_dist/'];
-var demoCleanFiles = ['./_demo/'];
+var demoCleanFiles = ['./docs/'];
 
 // Build /slug/ contents within the _dist folder
 var themeDestination = './_dist/' + slug + '/';
 var themeBuildFiles = './_dist/' + slug + '/**/*';
 
-// Build _demo contents.
-var demoDestination = './_demo/';
+// Build docs contents.
+var demoDestination = './docs/';
 
 
 // Browsers you care about for autoprefixing. https://github.com/ai/browserslist
@@ -136,7 +136,7 @@ gulp.task(clearCache);
 gulp.task('browser-sync', function (done) {
 	browserSync.init({
 		server: {
-			baseDir: "./_demo",
+			baseDir: "./docs",
 		},
 		open: true,
 		injectChanges: true,
@@ -182,7 +182,7 @@ gulp.task('pug', function (done) {
 				},
 			]
 		}))
-		.pipe(gulp.dest('./_demo'))
+		.pipe(gulp.dest('./docs'))
 		.pipe(browserSync.stream());
 	done();
 });
@@ -274,13 +274,13 @@ gulp.task('fontawesome', function (done) {
 			basename: 'fontawesome-all',
 			suffix: '.min'
 		}))
-		.pipe(gulp.dest('./_demo/assets/css'));
+		.pipe(gulp.dest('./docs/assets/css'));
 	done();
 });
 
 gulp.task('icons', function (done) {
 	return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**.*')
-		.pipe(gulp.dest('./_demo/assets/webfonts'));
+		.pipe(gulp.dest('./docs/assets/webfonts'));
 	done();
 });
 
