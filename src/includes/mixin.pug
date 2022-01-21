@@ -4,11 +4,12 @@ mixin pagetitle(data)
   .page-main-title
     .container
       .row.align-items-center
-        .col-lg-6
+        .col-lg-12
           if data.title
             h1.entry-title= data.title
           else
             h1.entry-title Page Title
+        .col-lg-6
           if data.description
             p= data.description
           else
@@ -27,7 +28,7 @@ mixin entryMetaTop(author, categories, date, commentCount, isEdit=false )
         i.far.fa-user
         = author
     if date
-      span.entry-meta-date 
+      span.entry-meta-date
         i.far.fa-clock
         = date
     if commentCount
@@ -108,7 +109,7 @@ mixin shop(isProductsFilter=true, style, column, ...items)
       div.product(class=column)
         .product-img-wrapper
           img(src=item.image, alt="Product Image")
-          a.btn.btn-dark.btn-add-to-cart(href='shop-single-product.html') Add to cart 
+          a.btn.btn-dark.btn-add-to-cart(href='shop-single-product.html') Add to cart
             i.fas.fa-shopping-cart.ml-1
         .product-content-wrapper
           h2.product-title
@@ -168,4 +169,4 @@ mixin portfolio(style, column, isReadMore=false, ...items)
             if item.content
               .entry-content
                 p= item.content
-  // End Portfolio 
+  // End Portfolio

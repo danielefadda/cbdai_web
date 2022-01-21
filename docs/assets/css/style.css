@@ -3157,6 +3157,10 @@ body.has-no-comments .comment-respond {
   min-height: 31vh !important;
 }
 
+.min-vh-20 {
+  min-height: 20vh !important;
+}
+
 .has-soft-orange-color {
   color: #4d9bed;
 }
