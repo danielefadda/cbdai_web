@@ -20,24 +20,28 @@ block content
         .container
           .row.justify-content-center
             .col-md-3.mb-4
-              div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
-                h5.has-soft-orange-color.mb-2 1.
-                h2.mb-4 Accesso
+              a(href='#accesso')
+                div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
+                  h5.has-soft-orange-color.mb-2 1.
+                  h2.mb-4 Accesso
             .col-md-3.mb-4
-              div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
-                h5.has-soft-orange-color.mb-2 2.
-                h2.mb-4 Formazione
+              a(href='#formazione')
+                div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
+                  h5.has-soft-orange-color.mb-2 2.
+                  h2.mb-4 Formazione
             .col-md-3.mb-4
-              div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
-                h5.has-soft-orange-color.mb-2 3.
-                h2.mb-4 Trasferimento Tecnologico
+              a(href='#trasferimento')
+                div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
+                  h5.has-soft-orange-color.mb-2 3.
+                  h2.mb-4 Trasferimento Tecnologico
             .col-md-3.mb-4
-              div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
-                h5.has-soft-orange-color.mb-2 4.
-                h2.mb-4 Ricerca
+              a(href='#ricerca')
+                div.text-left.align-items-center.float-left.has-soft-blue-background-color.text-white.p-3.mb-2.w-100.min-vh-20
+                  h5.has-soft-orange-color.mb-2 4.
+                  h2.mb-4 Ricerca
       .has-soft-creame-background-color.pt-3.pb-7.pt-lg-7.pb-lg-8
         .container
-          .row.gx-lg-5
+          .row.gx-lg-5#accesso
             .col-lg-6.mb-4
               h5.has-soft-orange-color.mb-2 1.
               h2.mb-4 Accesso
@@ -50,7 +54,7 @@ block content
             //    img(src="assets/images/29.jpg" alt="Meeting")
       .has-white-background-color.pt-3.pb-7.pt-lg-7.pb-lg-8
         .container
-          .row
+          .row#formazione
             .col-lg-6
               h5.has-soft-orange-color.mb-2 2.
                 h2.mb-4 Formazione
@@ -97,7 +101,7 @@ block content
 
       .has-soft-creame-background-color.pt-3.pb-5.pt-lg-7.pb-lg-6
         .container
-          .row
+          .row#trasferimento
             .col-lg-6
               h5.has-soft-orange-color.mb-2 3.
               h2.mb-4 Technology/knowledge transfer
@@ -140,6 +144,47 @@ block content
               table.table.mb-5.has-white-background-color
                 thead
                   tr
+                    th(scope='col')
+                    th(scope='col')
+                    th(scope='col') COLLABORAZIONI DEL CONSORZIO
+                tbody
+                  tr
+                    th(scope='row').font-weight-normal.text-right Telco
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal Wind, Tim, Orange, Vodafone, Huawei
+                  tr
+                    th(scope='row').font-weight-normal.text-right Web provider #[br] Sys.Integrators
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal Tiscali, Archimede Informatica SCARL, IT Partner Italia, INERA, 3Logic, Engineering, INTECS
+                  tr
+                    th(scope='row').font-weight-normal.text-right Assicurazioni
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal UNIPOL, Generali
+                  tr
+                    th(scope='row').font-weight-normal.text-right Provider di servizi per PA
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal Almaviva
+                  tr
+                    th(scope='row').font-weight-normal.text-right Banche
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal Unicredit, Intesasanpaolo
+                  tr
+                    th(scope='row').font-weight-normal.text-right Grande distribuzione
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal UniCoop, Sofidel
+                  tr
+                    th(scope='row').font-weight-normal.text-right Servizi di mobilità e nautica
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal FCA, Siemens, Trenitalia, Octotelematics, Viasat, Navionics, Toyota, Team Italia
+                  tr
+                    th(scope='row').font-weight-normal.text-right altro
+                    th(scope='row').font-weight-normal |
+                    th(scope='row').font-weight-normal Hyperborea, Archimede Informatica SCARL, Genesy, NetResult, Errequadro S.r.l, AMTesting
+
+
+              table.table.mb-5.has-white-background-color
+                thead
+                  tr
                     th(scope='col') STARTUP GIÀ AVVIATE
                 tbody
                   tr
@@ -156,9 +201,9 @@ block content
 
 
 
-      .has-white-background-color.pt-3.pb-7.pt-lg-7.pb-lg-8
+      .has-white-background-color.pt-3.pt-lg-7.pb-3
         .container
-          .row
+          .row#ricerca
             .col-lg-6
               h5.has-soft-orange-color.mb-2 4.
                 h2.mb-4 Ricerca
@@ -179,6 +224,25 @@ block content
                   tr
                     th(scope='row').font-weight-normal tutte le ricerche e gli esperimenti realizzati tengano conto dei diritti di privacy delle persone che hanno prodotto i dati
                   tr
-                    th(scope='row').font-weight-normal il progetto e la realizzazione di software data-driven includano fin dall’inizio tecniche per affrontare compiutamente e correttamente le domande etiche (approccio value-sensitive design)
+                    th(scope='row').font-weight-normal |l progetto e la realizzazione di software data-driven includano fin dall’inizio tecniche per affrontare compiutamente e correttamente le domande etiche (approccio value-sensitive design)
                   tr
                     th(scope='row').font-weight-normal tutte le ricerche adotteranno una logica open-science rendendo riproducibili i loro risultati e rendendo accessibili gli esperimenti (data set, modelli e workflow) sulle e-infrastructures del centro in rispetto alle regole di accessibilità peculiari della ricerca
+      .has-white-background-color.pb-4.pb-lg-5
+        .container
+          .row.justify-content-center
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_sbd.png" alt="SoBigData" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_tailor.png" alt="Tailor" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_humanAI.png" alt="humanAI" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_ai4eu.png" alt="ai4eu" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_grapes.png" alt="big data grapes" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_hexa.png" alt="hexa-x" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_ai4media.png" alt="ai4media" style='height:100px;')
+            .col-3.mb-3
+              img(src="assets/images/logo/logo_xai.png" alt="XAI" style='height:100px;')
